@@ -1,0 +1,38 @@
+# Travis CI build file for Kitura sample app.
+# Kitura runs on OS X and Linux (Ubuntu).
+# See the following URLs for further details on Travis CI
+# https://docs.travis-ci.com/user/customizing-the-build/
+# https://docs.travis-ci.com/user/docker/
+# https://docs.travis-ci.com/user/multi-os/
+
+sudo: required
+
+services:
+  - docker
+
+# whitelist (branches that should be built)
+branches:
+  only:
+    - master
+    # - develop#
+#     - /^issue.*$/
+
+# notifications:
+#   slack:
+#     secure: ""
+
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+      sudo: required
+
+before_install:
+  - docker build -t rchatham/api.reidchatham.com .
+
+script:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+      echo "Pushing rchatham/api.reidchatham.com image to Docker Hub.";
+      docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+      docker push rchatham/api.reidchatham.com:latest;
+    fi
