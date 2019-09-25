@@ -1,4 +1,4 @@
-FROM ibmcom/swift-ubuntu:latest
+FROM swift:latest
 MAINTAINER Reid Chatham
 LABEL Description="API for my website."
 
