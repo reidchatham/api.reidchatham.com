@@ -3,25 +3,18 @@
 ### Launch on [Docker](https://docs.docker.com/machine/examples/ocean/).
 
 ## Server
-Docker
-[Get Started with Docker | Docker](https://www.docker.com/get-started)
+- Docker: [Get Started with Docker | Docker](https://www.docker.com/get-started)
 
-Docker Swarm
-[Swarm mode key concepts | Docker Documentation](https://docs.docker.com/engine/swarm/key-concepts/)
+- Docker Swarm: [Swarm mode key concepts | Docker Documentation](https://docs.docker.com/engine/swarm/key-concepts/)
 
-Swish
-[GitHub - thomaspaulmann/Swish: 👷Build Swift Projects on a Remote Machine within Xcode.](https://github.com/thomaspaulmann/Swish)
+- Swish: [GitHub - thomaspaulmann/Swish: 👷Build Swift Projects on a Remote Machine within Xcode.](https://github.com/thomaspaulmann/Swish)
 	* Useful for running Xcode on external build systems
-	* 
 
-Launching to Digital Ocean
-[DigitalOcean example | Docker Documentation](https://docs.docker.com/machine/examples/ocean/)
+- Launching to Digital Ocean: [DigitalOcean example | Docker Documentation](https://docs.docker.com/machine/examples/ocean/)
 
-Vapor
-[Vapor (Server-side Swift)](https://vapor.codes)
+- Vapor: [Vapor (Server-side Swift)](https://vapor.codes)
 
-Vapor - Docker
-[Developing and deploying Vapor 3 with Docker | Toby Griffin](https://tobygriffin.dev/2018/05/14/developing-deploying-vapor-docker.html)
+- Vapor - Docker: [Developing and deploying Vapor 3 with Docker | Toby Griffin](https://tobygriffin.dev/2018/05/14/developing-deploying-vapor-docker.html)
 
 
 ### Server Side Swift
