@@ -2,11 +2,40 @@
 
 ### Launch on [Docker](https://docs.docker.com/machine/examples/ocean/).
 
+## Server
+Docker
+[Get Started with Docker | Docker](https://www.docker.com/get-started)
 
-### Interesting
+Docker Swarm
+[Swarm mode key concepts | Docker Documentation](https://docs.docker.com/engine/swarm/key-concepts/)
 
- - [Swift/Vapor with Docker and Docker Swarm](https://tobygriffin.dev/2018/05/14/developing-deploying-vapor-docker.html).
- - [Docker Swarm Mode](https://docs.docker.com/engine/swarm/).
+Swish
+[GitHub - thomaspaulmann/Swish: 👷Build Swift Projects on a Remote Machine within Xcode.](https://github.com/thomaspaulmann/Swish)
+	* Useful for running Xcode on external build systems
+	* 
+
+Launching to Digital Ocean
+[DigitalOcean example | Docker Documentation](https://docs.docker.com/machine/examples/ocean/)
+
+Vapor
+[Vapor (Server-side Swift)](https://vapor.codes)
+
+Vapor - Docker
+[Developing and deploying Vapor 3 with Docker | Toby Griffin](https://tobygriffin.dev/2018/05/14/developing-deploying-vapor-docker.html)
+
+
+### Server Side Swift
+* Running a Vapor Server in a Dockerized Linux Container and writing and testing using Xcode and Docker on Mac
+
+1. Download Xcode
+2. Download Docker for Mac
+3. SwiftEnv
+	* 	[Installation — swiftenv 1.4.0 documentation](https://swiftenv.fuller.li/en/latest/installation.html#via-homebrew)
+4. Install Vapor
+	* 	`brew tap vapor/tap`
+	* `brew install vapor/tap/vapor`
+4. Install Swish
+	 * `brew install thomaspaulmann/homebrew-formulae/swish`
 
 ---
 <p align="center">
