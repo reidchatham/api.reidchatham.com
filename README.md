@@ -4,12 +4,12 @@
 
 Run command `make docker_build_run` to build and run and instance of the api in a docker container on your machine.
 
-### Launch on [Docker](https://docs.docker.com/machine/examples/ocean/).
-
 ## Server
 - Docker: [Get Started with Docker | Docker](https://www.docker.com/get-started)
 
 - Docker Swarm: [Swarm mode key concepts | Docker Documentation](https://docs.docker.com/engine/swarm/key-concepts/)
+
+- Docker Machine and Digital Ocean: [DigitalOcean example](https://docs.docker.com/machine/examples/ocean/)
 
 - Swish: [GitHub - thomaspaulmann/Swish: 👷Build Swift Projects on a Remote Machine within Xcode.](https://github.com/thomaspaulmann/Swish)
 	* Useful for running Xcode on external build systems
