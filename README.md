@@ -1,5 +1,9 @@
 # api.reidchatham.com
 
+### Basic usage
+
+Run command `make docker_build_run` to build and run and instance of the api in a docker container on your machine.
+
 ### Launch on [Docker](https://docs.docker.com/machine/examples/ocean/).
 
 ## Server
