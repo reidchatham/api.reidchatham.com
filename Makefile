@@ -37,5 +37,19 @@ docker_run_postgres_dev:
 docker_build_run_postgres_dev: docker_build docker_run_postgres_dev
 
 # docker-machine
-docker_machine_do_launch: digital-ocean.token
-	docker-machine create --driver digitalocean --digitalocean-access-token digital-ocean.token api.reidchatham.com-sandbox
+DIGITALOCEAN_TOKEN_FILE=digital-ocean.token
+DIGITALOCEAN_TOKEN=`cat $(DIGITALOCEAN_TOKEN_FILE)`
+
+docker_machine_do_launch:
+	docker-machine create --driver digitalocean --digitalocean-access-token $(DIGITALOCEAN_TOKEN) api.reidchatham.com-sandbox
+	docker-machine env api.reidchatham.com-sandbox
+	eval $(docker-machine env api.reidchatham.com-sandbox)
+
+docker_machine_ssh:
+	docker-machine ssh api.reidchatham.com-sandbox
+
+docker_machine_do_stop:
+	docker-machine stop api.reidchatham.com-sandbox
+
+docker_machine_do_rm:
+	docker-machine rm api.reidchatham.com-sandbox
