@@ -27,3 +27,7 @@ docker_postgres:
 
 docker_run_postgres:
 	docker run -d -it --name=api.reidchatham.com-container -v $(pwd):/app -p 3000:3000 --link postgres-container:postgres api.reidchatham.com:1.0.0
+
+docker_build_run_postgres: docker_build docker_run_postgres
+
+
