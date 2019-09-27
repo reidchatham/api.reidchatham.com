@@ -9,7 +9,7 @@ Run command `make docker_build_run` to build and run an instance of the api in a
 
 - Docker Swarm: [Swarm mode key concepts | Docker Documentation](https://docs.docker.com/engine/swarm/key-concepts/)
 
-- Docker Machine and Digital Ocean: [DigitalOcean example](https://docs.docker.com/machine/examples/ocean/)
+- Docker Machine and Docker Compose: [Workflows: using Docker Machine and Docker Compose together in development | Alexander Zeitler](https://alexanderzeitler.com/articles/docker-machine-and-docker-compose-developer-workflows/)
 
 - Swish: [GitHub - thomaspaulmann/Swish: 👷Build Swift Projects on a Remote Machine within Xcode.](https://github.com/thomaspaulmann/Swish)
 	* Useful for running Xcode on external build systems
