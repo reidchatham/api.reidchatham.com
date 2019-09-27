@@ -1,6 +1,3 @@
-MAINTAINER Reid Chatham
-LABEL Description="API for my website."
-
 # Build image
 FROM swift:4.1 as builder
 RUN apt-get -qq update && apt-get -q -y install \
@@ -13,6 +10,8 @@ RUN swift build -c release && mv `swift build -c release --show-bin-path` /build
 
 # Production image
 FROM ubuntu:16.04
+MAINTAINER Reid Chatham
+LABEL Description="API for my website."
 RUN apt-get -qq update && apt-get install -y \
   libicu55 libxml2 libbsd0 libcurl3 libatomic1 \
   tzdata \
