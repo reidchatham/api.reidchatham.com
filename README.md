@@ -19,7 +19,7 @@ Run command `make docker_build_run` to build and run an instance of the api in a
 
 - Vapor: [Vapor (Server-side Swift)](https://vapor.codes)
 
-- Vapor - Docker: [Developing and deploying Vapor 3 with Docker | Toby Griffin](https://tobygriffin.dev/2018/05/14/developing-deploying-vapor-docker.html)
+- Vapor - Docker: [Developing and deploying Vapor 3 with Docker | Toby Griffin](https://tobygriffin.dev/2018/05/14/developing-deploying-vapor-docker.html), [Docker loves Swift & Vapor - The.Swift.Dev.](https://theswiftdev.com/2018/11/15/docker-loves-swift-and-vapor/)
 
 
 ### Server Side Swift
