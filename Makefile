@@ -1,3 +1,4 @@
+
 docker_build:
 	docker build -t api.reidchatham.com:1.0.0 .
 
@@ -26,8 +27,15 @@ docker_postgres:
 	docker run -d -it --name=postgres-container -p 27017:27017 postgres
 
 docker_run_postgres:
-	docker run -d -it --name=api.reidchatham.com-container -v $(pwd):/app -p 3000:3000 --link postgres-container:postgres api.reidchatham.com:1.0.0
+	docker run -d -it --name=api.reidchatham.com-container -p 3000:3000 --link postgres-container:postgres api.reidchatham.com:1.0.0
 
 docker_build_run_postgres: docker_build docker_run_postgres
 
+docker_run_postgres_dev:
+	docker run -d -it --name=api.reidchatham.com-container -v $(pwd):/app -p 3000:3000 --link postgres-container:postgres api.reidchatham.com:1.0.0
 
+docker_build_run_postgres_dev: docker_build docker_run_postgres_dev
+
+# docker-machine
+docker_machine_do_launch: digital-ocean.token
+	docker-machine create --driver digitalocean --digitalocean-access-token digital-ocean.token api.reidchatham.com-sandbox
