@@ -2,7 +2,8 @@
 
 ### Basic usage
 
-Run command `make docker_build_run` to build and run an instance of the api in a docker container on your machine. Getting started with [Make](https://www.cs.oberlin.edu/~kuperman/help/make.html).
+Run command `make docker_build_run` to build and run an instance of the api in a docker container on your machine. 
+- Getting started with [Make](https://www.cs.oberlin.edu/~kuperman/help/make.html).
 
 ## Server
 - Docker: [Get Started with Docker | Docker](https://www.docker.com/get-started)
