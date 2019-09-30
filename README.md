@@ -5,6 +5,18 @@
 Run command `make docker_build_run` to build and run an instance of the api in a docker container on your machine. 
 - Getting started with [Make](https://www.cs.oberlin.edu/~kuperman/help/make.html).
 
+Also try `docker-compose up`.
+
+### Launch the server
+
+Use `make docker_machine_do_launch` to launch to Digital Ocean.
+
+Then try `make docker_machine_ssh` to ssh into the Digital Ocean Droplet.
+
+Then `docker-compose up` to run the docker container in the Digital Ocean Droplet.
+
+Now try navigating to the ip address of your Droplet to see that it's working. Better yet try it on a different computer, then you know it's working.
+
 ## Server
 - Docker: [Get Started with Docker | Docker](https://www.docker.com/get-started)
 
