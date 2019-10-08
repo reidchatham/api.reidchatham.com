@@ -37,6 +37,9 @@ Now try navigating to the ip address of your Droplet to see that it's working. B
 
 - Vapor - Web Auth: [Tutorial: How to build Web Auth with Session](https://medium.com/@martinlasek/tutorial-how-to-build-web-auth-with-session-f9f64ba49830)
 
+- Postgres: [How to Start PostgreSQL Server on Mac OS X via Homebrew](https://chartio.com/resources/tutorials/how-to-start-postgresql-server-on-mac-os-x/)
+	* Useful stack overflow answers. [Homebrew postgres broken](https://stackoverflow.com/questions/27700596/homebrew-postgres-broken), [PostgreSQL error Fatal: role “username” does not exist](https://stackoverflow.com/questions/28276706/postgresql-error-fatal-role-username-does-not-exist)
+
 ### Server Side Swift
 * Running a Vapor Server in a Dockerized Linux Container and writing and testing using Xcode and Docker on Mac
 
