@@ -1,55 +1,83 @@
+IMAGE_NAME=api.reidchatham.com
+VERSION=1.0.0
+CONTAINER_NAME=api.reidchatham.com-container
+CONTAINER_PORT=8080
+EXPOSED_PORT=8080
+# POSTGRES_CONTAINER_NAME=postgres-container
+# POSTGRES_CONTAINER_PORT=5432
+# POSTGRES_EXPOSED_PORT=5432
 
 docker_build:
-	docker build -t api.reidchatham.com:1.0.0 .
+	docker build -t $(IMAGE_NAME):$(VERSION) .
 
 docker_run:
-	docker run -it --name=api.reidchatham.com-container -p 8080:8080 api.reidchatham.com:1.0.0
+	docker run -it --name=$(CONTAINER_NAME) -p $(CONTAINER_PORT):$(EXPOSED_PORT) $(IMAGE_NAME):$(VERSION)
 
 docker_build_run: docker_build docker_run
 
 docker_stop:
-	docker stop api.reidchatham.com-container
+	docker stop $(CONTAINER_NAME)
 
 docker_remove:
-	docker rm api.reidchatham.com-container
+	docker rm $(CONTAINER_NAME)
+
+docker_stop_rm: docker_stop docker_remove
 
 docker_restart:
-	docker restart api.reidchatham.com-container
+	docker restart $(CONTAINER_NAME)
 
 # dev
 # run docker with current directory mounted to app folder in container
 docker_run_dev:
-	docker run -d -it --name=api.reidchatham.com-container -v $(pwd):/app -p 8080:8080 api.reidchatham.com:1.0.0
+	docker run -d -it --name=$(CONTAINER_NAME) -v $(pwd):/app -p $(CONTAINER_PORT):$(EXPOSED_PORT) $(IMAGE_NAME):$(VERSION)
 
 docker_build_run_dev: docker_build docker_run_dev
 
 docker_postgres:
-	docker run -d -it --name=postgres-container -p 27017:27017 postgres
+	docker run -d -it --name=postgres-container -p 5432:5432 postgres
 
-docker_run_postgres:
-	docker run -d -it --name=api.reidchatham.com-container -p 3000:3000 --link postgres-container:postgres api.reidchatham.com:1.0.0
+docker_run_postgres: docker_postgres
+	docker run -d -it --name=$(CONTAINER_NAME) -p $(CONTAINER_PORT):$(EXPOSED_PORT) --link postgres-container:postgres $(IMAGE_NAME):$(VERSION)
 
 docker_build_run_postgres: docker_build docker_run_postgres
 
-docker_run_postgres_dev:
-	docker run -d -it --name=api.reidchatham.com-container -v $(pwd):/app -p 3000:3000 --link postgres-container:postgres api.reidchatham.com:1.0.0
+docker_run_postgres_dev: docker_postgres
+	docker run -it --name=$(CONTAINER_NAME) -v $(pwd):/app -p $(CONTAINER_PORT):$(EXPOSED_PORT) --link postgres-container:postgres $(IMAGE_NAME):$(VERSION)
 
 docker_build_run_postgres_dev: docker_build docker_run_postgres_dev
+
+docker_stop_postgres:
+	docker stop postgres-container
+
+docker_rm_postgres:
+	docker rm postgres-container
+
+docker_stop_rm_postgres: docker_stop_postgres docker_rm_postgres
+
+docker_stop_rm_all: docker_stop_rm docker_stop_rm_postgres
 
 # docker-machine
 DIGITALOCEAN_TOKEN_FILE=digital-ocean.token
 DIGITALOCEAN_TOKEN=`cat $(DIGITALOCEAN_TOKEN_FILE)`
+DIGITALOCEAN_DROPLET_NAME=api.reidchatham.com-sandbox
 
 docker_machine_do_launch:
-	docker-machine create --driver digitalocean --digitalocean-access-token $(DIGITALOCEAN_TOKEN) api.reidchatham.com-sandbox
-	docker-machine env api.reidchatham.com-sandbox
+	docker-machine create --driver=digitalocean --digitalocean-access-token $(DIGITALOCEAN_TOKEN) $(DIGITALOCEAN_DROPLET_NAME)
+	docker-machine env $(DIGITALOCEAN_DROPLET_NAME)
 	eval $(docker-machine env api.reidchatham.com-sandbox)
 
+docker_machine_do_ip:
+	docker-machine ip $(DIGITALOCEAN_DROPLET_NAME)
+
 docker_machine_ssh:
-	docker-machine ssh api.reidchatham.com-sandbox
+	docker-machine ssh $(DIGITALOCEAN_DROPLET_NAME)
 
-docker_machine_do_stop:
-	docker-machine stop api.reidchatham.com-sandbox
+docker_machine_stop:
+	docker-machine stop $(DIGITALOCEAN_DROPLET_NAME)
 
-docker_machine_do_rm:
-	docker-machine rm api.reidchatham.com-sandbox
+docker_machine_rm:
+	docker-machine rm $(DIGITALOCEAN_DROPLET_NAME)
+
+docker_machine_unset:
+	docker-machine env -u
+	eval $(docker-machine env -u)
