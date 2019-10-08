@@ -1,7 +1,6 @@
 # API Tokens
 digital-ocean.token
 
-
 # Vapor
 Packages
 .build
@@ -10,6 +9,8 @@ xcuserdata
 DerivedData/
 .DS_Store
 
+# Docker
+logfile
 
 
 # Xcode
