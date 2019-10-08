@@ -16,6 +16,8 @@ We are using PostgreSQL.
 
 - Stop database: `dropdb mydbname`
 
+- Stop Postgres database: `brew services stop postgresql`
+
 
 ## For use with Docker
 
