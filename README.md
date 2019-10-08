@@ -33,6 +33,9 @@ Now try navigating to the ip address of your Droplet to see that it's working. B
 
 - Vapor - Docker: [Developing and deploying Vapor 3 with Docker | Toby Griffin](https://tobygriffin.dev/2018/05/14/developing-deploying-vapor-docker.html), [Docker loves Swift & Vapor - The.Swift.Dev.](https://theswiftdev.com/2018/11/15/docker-loves-swift-and-vapor/)
 
+- Vapor - Postgres: [Tutorial: How to use PostgreSQL](https://medium.com/@martinlasek/tutorial-how-to-use-postgresql-efb62a434cc5)
+
+- Vapor - Web Auth: [Tutorial: How to build Web Auth with Session](https://medium.com/@martinlasek/tutorial-how-to-build-web-auth-with-session-f9f64ba49830)
 
 ### Server Side Swift
 * Running a Vapor Server in a Dockerized Linux Container and writing and testing using Xcode and Docker on Mac
