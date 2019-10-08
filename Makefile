@@ -1,5 +1,5 @@
 IMAGE_NAME=api.reidchatham.com
-VERSION=1.0.0
+VERSION=2.0.0-beta1
 CONTAINER_NAME=api.reidchatham.com-container
 CONTAINER_PORT=8080
 EXPOSED_PORT=8080
