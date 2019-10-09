@@ -4,7 +4,7 @@ We are using PostgreSQL.
 
 ## For use with XCode - [Tutorial: How to use PostgreSQL](https://medium.com/@martinlasek/tutorial-how-to-use-postgresql-efb62a434cc5)
 
-Helpful links: [PostgreSQL not running on Mac](https://dba.stackexchange.com/questions/75214/postgresql-not-running-on-mac?newreg=7653d562d5e448799bb3102faf5d267a), [17.3. Starting the Database Server](https://www.postgresql.org/docs/9.0/server-start.html)
+Helpful links: [PostgreSQL not running on Mac](https://dba.stackexchange.com/questions/75214/postgresql-not-running-on-mac?newreg=7653d562d5e448799bb3102faf5d267a), [17.3. Starting the Database Server](https://www.postgresql.org/docs/9.0/server-start.html), [How to Start PostgreSQL Server on Mac OS X via Homebrew](https://chartio.com/resources/tutorials/how-to-start-postgresql-server-on-mac-os-x/)
 
 - Install Postgres: `brew install postgresql`
 
