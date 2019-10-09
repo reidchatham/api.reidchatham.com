@@ -12,6 +12,7 @@ DerivedData/
 # Docker
 logfile
 
+postgres/
 
 # Xcode
 #
