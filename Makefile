@@ -1,3 +1,4 @@
+# image
 USERNAME=rchatham
 IMAGE_NAME=api.reidchatham.com
 VERSION=2.0.0-beta1
@@ -5,7 +6,6 @@ CONTAINER_NAME=api.reidchatham.com-container
 CONTAINER_PORT=8080
 EXPOSED_PORT=8080
 
-# image
 docker_build:
 	docker build -t $(IMAGE_NAME):$(VERSION) .
 
@@ -100,5 +100,13 @@ docker_machine_unset:
 	eval $(docker-machine env -u)
 
 #swarm
+SWARM_NAME=api-reidchatham-com
+
 docker_stack_deploy:
-	docker stack deploy -c docker-compose.yml api-reidchatham-com
+	docker stack deploy -c docker-compose.yml $(SWARM_NAME)
+
+docker_stack_rm:
+	docker stack rm $(SWARM_NAME)
+
+docker_swarm_leave:
+	docker swarm leave --force
