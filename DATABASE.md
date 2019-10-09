@@ -29,4 +29,4 @@ Helpful links: [PostgreSQL not running on Mac](https://dba.stackexchange.com/que
 
 ## For use with Docker
 
-In progress..
+- Wait for Postgres: [Control startup and shutdown order in Compose](https://docs.docker.com/compose/startup-order/)
