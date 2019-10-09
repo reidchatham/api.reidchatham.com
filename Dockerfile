@@ -20,5 +20,5 @@ WORKDIR /app
 COPY --from=builder /app/Resources/ /app/Resources/
 COPY --from=builder /build/bin/Run .
 COPY --from=builder /build/lib/* /usr/lib/
-EXPOSE 4000
+EXPOSE 8080
 ENTRYPOINT ./Run serve -e prod -b 0.0.0.0

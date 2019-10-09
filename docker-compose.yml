@@ -17,26 +17,26 @@ services:
       POSTGRES_PASSWORD: test
       POSTGRES_DB: test
       # POSTGRES_PORT: 27017
-      EXPOSED_PORT: 4000
+      EXPOSED_PORT: 8080
     ports:
-      - 4000:80
+      - 8080:8080
     # volumes:
     #   - ./:/app
     networks:
       - webnet
     depends_on:
       - "db"
-  visualizer:
-    image: dockersamples/visualizer:stable
-    ports:
-      - 8080:8080
-    volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock"
-    deploy:
-      placement:
-        constraints: [node.role == manager]
-    networks:
-      - webnet
+  # visualizer:
+  #   image: dockersamples/visualizer:stable
+  #   ports:
+  #     - 8080:8080
+  #   volumes:
+  #     - "/var/run/docker.sock:/var/run/docker.sock"
+  #   deploy:
+  #     placement:
+  #       constraints: [node.role == manager]
+  #   networks:
+  #     - webnet
   db:
     image: postgres
     environment:
