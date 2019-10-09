@@ -1,18 +1,15 @@
 version: "3"
 services:
   api:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: api.reidchatham.com:1.0.0
-    # deploy:
-    #   replicas: 5
-    #   resources:
-    #     limits:
-    #       cpus: "0.1"
-    #       memory: 50M
-    #   restart_policy:
-    #     condition: on-failure
+    image: rchatham/api.reidchatham.com:2.0.0-beta1
+    deploy:
+      replicas: 5
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
+      restart_policy:
+        condition: on-failure
     environment:
       SLEEP_LENGTH: 5
       POSTGRES_HOST: db
@@ -20,19 +17,38 @@ services:
       POSTGRES_PASSWORD: test
       POSTGRES_DB: test
       # POSTGRES_PORT: 27017
+      EXPOSED_PORT: 4000
     ports:
-      - 8080:8080
+      - 4000:80
     # volumes:
     #   - ./:/app
-    # networks:
-    #   - webnet
+    networks:
+      - webnet
     depends_on:
       - "db"
+  visualizer:
+    image: dockersamples/visualizer:stable
+    ports:
+      - 8080:8080
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    networks:
+      - webnet
   db:
     image: postgres
     environment:
       POSTGRES_USER: test
       POSTGRES_PASSWORD: test
       POSTGRES_DB: test
-# networks:
-#   webnet:
+    # ports:
+    #   - 5432:5432
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    networks:
+      - webnet
+networks:
+  webnet:

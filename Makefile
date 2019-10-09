@@ -4,12 +4,13 @@ VERSION=2.0.0-beta1
 CONTAINER_NAME=api.reidchatham.com-container
 CONTAINER_PORT=8080
 EXPOSED_PORT=8080
-POSTGRES_CONTAINER_NAME=postgres-container
-POSTGRES_CONTAINER_PORT=5432
-POSTGRES_EXPOSED_PORT=5432
 
+# image
 docker_build:
 	docker build -t $(IMAGE_NAME):$(VERSION) .
+
+docker_build_dev:
+	docker build -f Dockerfile-dev -t $(IMAGE_NAME):dev .
 
 docker_run:
 	docker run -it --name=$(CONTAINER_NAME) -p $(CONTAINER_PORT):$(EXPOSED_PORT) $(IMAGE_NAME):$(VERSION)
@@ -33,12 +34,10 @@ docker_tag:
 docker_push:
 	docker push $(USERNAME)/$(IMAGE_NAME):$(VERSION)
 
-# dev
-# run docker with current directory mounted to app folder in container
-docker_run_dev:
-	docker run -d -it --name=$(CONTAINER_NAME) -v $(pwd):/app -p $(CONTAINER_PORT):$(EXPOSED_PORT) $(IMAGE_NAME):$(VERSION)
-
-docker_build_run_dev: docker_build docker_run_dev
+# postgres
+POSTGRES_CONTAINER_NAME=postgres-container
+POSTGRES_CONTAINER_PORT=5432
+POSTGRES_EXPOSED_PORT=5432
 
 docker_postgres:
 	docker run -d -it --name=$(POSTGRES_CONTAINER_NAME) -p $(POSTGRES_CONTAINER_PORT):$(POSTGRES_EXPOSED_PORT) postgres
@@ -48,11 +47,6 @@ docker_run_postgres: docker_postgres
 
 docker_build_run_postgres: docker_build docker_run_postgres
 
-docker_run_postgres_dev: docker_postgres
-	docker run -it --name=$(CONTAINER_NAME) -v $(pwd):/app -p $(CONTAINER_PORT):$(EXPOSED_PORT) --link $(POSTGRES_CONTAINER_NAME):postgres $(IMAGE_NAME):$(VERSION)
-
-docker_build_run_postgres_dev: docker_build docker_run_postgres_dev
-
 docker_stop_postgres:
 	docker stop $(POSTGRES_CONTAINER_NAME)
 
@@ -61,7 +55,23 @@ docker_rm_postgres:
 
 docker_stop_rm_postgres: docker_stop_postgres docker_rm_postgres
 
+# dev
+# run docker with current directory mounted to app folder in container
+docker_run_dev:
+	docker run -d -it --name=$(CONTAINER_NAME) -v $(pwd):/app -p $(CONTAINER_PORT):$(EXPOSED_PORT) $(IMAGE_NAME):$(VERSION)
+
+docker_build_run_dev: docker_build docker_run_dev
+
+docker_run_postgres_dev: docker_postgres
+	docker run -it --name=$(CONTAINER_NAME) -v $(pwd):/app -p $(CONTAINER_PORT):$(EXPOSED_PORT) --link $(POSTGRES_CONTAINER_NAME):postgres $(IMAGE_NAME):$(VERSION)
+
+docker_build_run_postgres_dev: docker_build docker_run_postgres_dev
+
 docker_stop_rm_all: docker_stop_rm docker_stop_rm_postgres
+
+# docker-compose
+docker_compose_dev:
+	docker-compose -f docker-compose-dev.yml up
 
 # docker-machine
 DIGITALOCEAN_TOKEN_FILE=digital-ocean.token
@@ -88,3 +98,7 @@ docker_machine_rm:
 docker_machine_unset:
 	docker-machine env -u
 	eval $(docker-machine env -u)
+
+#swarm
+docker_stack_deploy:
+	docker stack deploy -c docker-compose.yml api-reidchatham-com
