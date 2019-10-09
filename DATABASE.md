@@ -20,6 +20,7 @@ Helpful links: [PostgreSQL not running on Mac](https://dba.stackexchange.com/que
 - Stop database: `dropdb mydbname`
 
 - Stop Postgres database: `brew services stop postgresql`
+ * Do it manually: `pg_ctl -D /usr/local/var/postgres stop -s -m fast`
 
 - Upgrade database: `brew postgresql-upgrade-database`
 
