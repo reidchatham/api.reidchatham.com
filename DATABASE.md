@@ -4,11 +4,14 @@ We are using PostgreSQL.
 
 ## For use with XCode - [Tutorial: How to use PostgreSQL](https://medium.com/@martinlasek/tutorial-how-to-use-postgresql-efb62a434cc5)
 
+Helpful links: [PostgreSQL not running on Mac](https://dba.stackexchange.com/questions/75214/postgresql-not-running-on-mac?newreg=7653d562d5e448799bb3102faf5d267a)
+
 - Install Postgres: `brew install postgresql`
 
 - Initialize Postgres database: `initdb /usr/local/var/postgres`
 
 - Start Postgres database: `brew services start postgresql`
+  * Do it manually: `pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start`
   
 - Create database: `createdb mydbname`
 
@@ -17,6 +20,10 @@ We are using PostgreSQL.
 - Stop database: `dropdb mydbname`
 
 - Stop Postgres database: `brew services stop postgresql`
+
+- Upgrade database: `brew postgresql-upgrade-database`
+
+- Uninstall Postgres: `brew uninstall postgresql`
 
 
 ## For use with Docker
