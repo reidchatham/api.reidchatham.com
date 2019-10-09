@@ -21,7 +21,7 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     let pgConfig = PostgreSQLDatabaseConfig(
         hostname: Environment.get("POSTGRES_HOST") ?? "127.0.0.1",
         port: {
-                if let param = Environment.get("POSTGRE_PORT"), let newPort = Int(param) {
+                if let param = Environment.get("POSTGRES_PORT"), let newPort = Int(param) {
                     return newPort
                 } else {
                     return 5432
@@ -55,6 +55,12 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
 
     config.prefer(MemoryKeyedCache.self, for: KeyedCache.self)
 
-    let nio = NIOServerConfig.default(port: 8080)
+    let nio = NIOServerConfig.default(port: {
+            if let param = Environment.get("EXPOSED_PORT"), let newPort = Int(param) {
+                return newPort
+            } else {
+                return 8080
+            }
+        }())
     services.register(nio)
 }
