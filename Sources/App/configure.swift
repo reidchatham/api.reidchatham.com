@@ -59,7 +59,7 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
             if let param = Environment.get("EXPOSED_PORT"), let newPort = Int(param) {
                 return newPort
             } else {
-                return 4000
+                return 80
             }
         }())
     services.register(nio)

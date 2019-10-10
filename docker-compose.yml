@@ -12,14 +12,14 @@ services:
         condition: on-failure
     environment:
       SLEEP_LENGTH: 5
-      # POSTGRES_HOST: db
-      # POSTGRES_USER: test
-      # POSTGRES_PASSWORD: test
-      # POSTGRES_DB: test
+      POSTGRES_HOST: db
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: test
       # POSTGRES_PORT: 27017
-      EXPOSED_PORT: 4000
-    env_file:
-      - ./env/postgres.env
+      EXPOSED_PORT: 80
+    # env_file:
+    #   - ./env/postgres.env
     ports:
       - 4000:80
     # volumes:
@@ -28,25 +28,25 @@ services:
       - webnet
     depends_on:
       - "db"
-  # visualizer:
-  #   image: dockersamples/visualizer:stable
-  #   ports:
-  #     - 8080:8080
-  #   volumes:
-  #     - "/var/run/docker.sock:/var/run/docker.sock"
-  #   deploy:
-  #     placement:
-  #       constraints: [node.role == manager]
-  #   networks:
-  #     - webnet
+  visualizer:
+    image: dockersamples/visualizer:stable
+    ports:
+      - 8080:8080
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    networks:
+      - webnet
   db:
     image: postgres
-  env_file:
-    - ./env/postgres.env
-    # environment:
-      # POSTGRES_USER: test
-      # POSTGRES_PASSWORD: test
-      # POSTGRES_DB: test
+  # env_file:
+  #   - ./env/postgres.env
+    environment:
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: test
     # ports:
     #   - 5432:5432
     deploy:
