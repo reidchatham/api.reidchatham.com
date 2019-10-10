@@ -29,6 +29,8 @@ Now try navigating to the ip address of your Droplet to see that it's working. B
 
 - Launching to Digital Ocean: [DigitalOcean example | Docker Documentation](https://docs.docker.com/machine/examples/ocean/)
 
+- Docker Machine and Digital Ocean: [Adding Existing Digital Ocean Droplet To Docker-Machine](https://medium.com/rayn-studios/adding-existing-digital-ocean-droplet-to-docker-machine-93dfb28e1d96)
+
 - Vapor: [Vapor (Server-side Swift)](https://vapor.codes), [https://github.com/vaporberlin/vaporschool](https://github.com/vaporberlin/vaporschool)
 
 - Vapor - Docker: [Developing and deploying Vapor 3 with Docker | Toby Griffin](https://tobygriffin.dev/2018/05/14/developing-deploying-vapor-docker.html), [Docker loves Swift & Vapor - The.Swift.Dev.](https://theswiftdev.com/2018/11/15/docker-loves-swift-and-vapor/), [VaporDockerDemo](https://github.com/tylermilner/VaporDockerDemo)
