@@ -3,7 +3,7 @@ USERNAME=rchatham
 IMAGE_NAME=api.reidchatham.com
 VERSION=2.0.0-beta1
 CONTAINER_NAME=api.reidchatham.com-container
-CONTAINER_PORT=4000
+CONTAINER_PORT=80
 EXPOSED_PORT=80
 
 docker_build:
@@ -74,6 +74,9 @@ docker_stop_rm_all: docker_stop_rm docker_stop_rm_postgres
 docker_compose_dev:
 	docker-compose -f docker-compose-dev.yml up
 
+docker_compose_dev_down:
+	docker-compose -f docker-compose-dev.yml down
+
 # docker-machine
 DIGITALOCEAN_TOKEN_FILE=digital-ocean.token
 DIGITALOCEAN_TOKEN=`cat $(DIGITALOCEAN_TOKEN_FILE)`
@@ -83,6 +86,17 @@ docker_machine_do_launch:
 	docker-machine create --driver=digitalocean --digitalocean-access-token $(DIGITALOCEAN_TOKEN) $(DIGITALOCEAN_DROPLET_NAME)
 	docker-machine env $(DIGITALOCEAN_DROPLET_NAME)
 	eval $(docker-machine env api.reidchatham.com-sandbox)
+
+docker_machine_do_launch_2:
+	docker-machine create --driver=digitalocean --digitalocean-access-token $(DIGITALOCEAN_TOKEN) $(DIGITALOCEAN_DROPLET_NAME)-2
+	docker-machine env $(DIGITALOCEAN_DROPLET_NAME)-2
+
+docker_machine_do_launch_3:
+	docker-machine create --driver=digitalocean --digitalocean-access-token $(DIGITALOCEAN_TOKEN) $(DIGITALOCEAN_DROPLET_NAME)-3
+	docker-machine env $(DIGITALOCEAN_DROPLET_NAME)-3
+
+docker_machine_ls:
+	docker-machine ls
 
 docker_machine_do_ip:
 	docker-machine ip $(DIGITALOCEAN_DROPLET_NAME)
@@ -106,8 +120,14 @@ SWARM_NAME=api-reidchatham-com
 docker_stack_deploy:
 	docker stack deploy -c docker-compose.yml $(SWARM_NAME)
 
+docker_stack_ps:
+	docker stack ps $(SWARM_NAME)
+
 docker_stack_rm:
 	docker stack rm $(SWARM_NAME)
+
+docker_swarm_init:
+	docker swarm init
 
 docker_swarm_leave:
 	docker swarm leave --force
