@@ -9,9 +9,6 @@ EXPOSED_PORT=80
 docker_build:
 	docker build -t $(IMAGE_NAME):$(VERSION) .
 
-docker_build_dev:
-	docker build -f Dockerfile-dev -t $(IMAGE_NAME):dev .
-
 docker_run:
 	docker run -it --name=$(CONTAINER_NAME) -p $(CONTAINER_PORT):$(EXPOSED_PORT) $(IMAGE_NAME):$(VERSION)
 
@@ -34,13 +31,17 @@ docker_tag:
 docker_push:
 	docker push $(USERNAME)/$(IMAGE_NAME):$(VERSION)
 
+docker_run_prod:
+	docker run -p $(CONTAINER_PORT):$(EXPOSED_PORT) $(USERNAME)/$(IMAGE_NAME):$(VERSION)
+
 # postgres
 POSTGRES_CONTAINER_NAME=postgres-container
 POSTGRES_CONTAINER_PORT=5432
 POSTGRES_EXPOSED_PORT=5432
+POSTGRES_ENV_FILE=env/postgres.env
 
 docker_postgres:
-	docker run -d -it --name=$(POSTGRES_CONTAINER_NAME) -p $(POSTGRES_CONTAINER_PORT):$(POSTGRES_EXPOSED_PORT) postgres
+	docker run -d -it --name=$(POSTGRES_CONTAINER_NAME) -p $(POSTGRES_CONTAINER_PORT):$(POSTGRES_EXPOSED_PORT) --env-file=$(POSTGRES_ENV_FILE) postgres
 
 docker_run_postgres: docker_postgres
 	docker run -d -it --name=$(CONTAINER_NAME) -p $(CONTAINER_PORT):$(EXPOSED_PORT) --link $(POSTGRES_CONTAINER_NAME):postgres $(IMAGE_NAME):$(VERSION)
