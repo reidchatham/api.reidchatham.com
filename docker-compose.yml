@@ -17,9 +17,9 @@ services:
       POSTGRES_PASSWORD: test
       POSTGRES_DB: test
       # POSTGRES_PORT: 27017
-      EXPOSED_PORT: 8080
+      EXPOSED_PORT: 4000
     ports:
-      - 8080:8080
+      - 4000:80
     # volumes:
     #   - ./:/app
     networks:

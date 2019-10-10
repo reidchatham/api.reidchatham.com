@@ -3,8 +3,8 @@ USERNAME=rchatham
 IMAGE_NAME=api.reidchatham.com
 VERSION=2.0.0-beta1
 CONTAINER_NAME=api.reidchatham.com-container
-CONTAINER_PORT=8080
-EXPOSED_PORT=8080
+CONTAINER_PORT=4000
+EXPOSED_PORT=80
 
 docker_build:
 	docker build -t $(IMAGE_NAME):$(VERSION) .
