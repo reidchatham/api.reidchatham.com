@@ -18,7 +18,7 @@ Then `docker-compose up` to run the docker container in the Digital Ocean Drople
 Now try navigating to the ip address of your Droplet to see that it's working. Better yet try it on a different computer, then you know it's working.
 
 ## Server
-- Docker: [Get Started with Docker | Docker](https://www.docker.com/get-started)
+- Docker: [Get Started with Docker | Docker](https://www.docker.com/get-started), [Archived: Get Started with Docker | Docker](https://github.com/rchatham/docker.github.io/tree/master/get-started)
 
 - Docker Swarm: [Swarm mode key concepts | Docker Documentation](https://docs.docker.com/engine/swarm/key-concepts/), [Swarm mode overview](https://docs.docker.com/engine/swarm/#swarm-mode-cli-commands), [Getting started with swarm mode](https://docs.docker.com/engine/swarm/swarm-tutorial/)
 
