@@ -30,3 +30,5 @@ Helpful links: [PostgreSQL not running on Mac](https://dba.stackexchange.com/que
 ## For use with Docker
 
 - Wait for Postgres: [Control startup and shutdown order in Compose](https://docs.docker.com/compose/startup-order/)
+
+- Official Docker Image: [postgres - Docker Hub](https://hub.docker.com/_/postgres)
