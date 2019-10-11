@@ -21,6 +21,9 @@ Now try navigating to the ip address of your Droplet to see that it's working. B
 - Docker: [Get Started with Docker | Docker](https://www.docker.com/get-started), [Archived: Get Started with Docker | Docker](https://github.com/rchatham/docker.github.io/tree/master/get-started)
 	* [Docker ARG, ENV and .env - a Complete Guide](https://vsupalov.com/docker-arg-env-variable-guide/)
 
+- Docker Compose: [Get Started, Part 3: Services](https://github.com/rchatham/docker.github.io/blob/master/get-started/part3.md)
+	* [Environment variables in Compose](https://docs.docker.com/compose/environment-variables/)
+
 - Docker Swarm: [Swarm mode key concepts | Docker Documentation](https://docs.docker.com/engine/swarm/key-concepts/), [Swarm mode overview](https://docs.docker.com/engine/swarm/#swarm-mode-cli-commands), [Getting started with swarm mode](https://docs.docker.com/engine/swarm/swarm-tutorial/)
 
 - Docker Machine and Docker Compose: [Workflows: using Docker Machine and Docker Compose together in development | Alexander Zeitler](https://alexanderzeitler.com/articles/docker-machine-and-docker-compose-developer-workflows/)
