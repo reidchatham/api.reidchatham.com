@@ -2,6 +2,20 @@
 
 ### Basic usage
 
+#### Use with XCode
+
+- Run a postgres database using the env variables from XCode.
+- Run the app in XCode.
+
+#### Docker Compose
+
+- Run `make docker_compose_dev`
+
+#### Docker Machine
+
+- 
+
+
 Run command `make docker_build_run` to build and run an instance of the api in a docker container on your machine. 
 - Getting started with [Make](https://www.cs.oberlin.edu/~kuperman/help/make.html).
 
@@ -24,7 +38,7 @@ Now try navigating to the ip address of your Droplet to see that it's working. B
 - Docker Compose: [Get Started, Part 3: Services](https://github.com/rchatham/docker.github.io/blob/master/get-started/part3.md)
 	* [Environment variables in Compose](https://docs.docker.com/compose/environment-variables/)
 
-- Docker Swarm: [Swarm mode key concepts | Docker Documentation](https://docs.docker.com/engine/swarm/key-concepts/), [Swarm mode overview](https://docs.docker.com/engine/swarm/#swarm-mode-cli-commands), [Getting started with swarm mode](https://docs.docker.com/engine/swarm/swarm-tutorial/), [Docker Swarm Mode Tutorials](https://github.com/docker/labs/tree/master/swarm-mode)
+- Docker Swarm: [Swarm mode key concepts | Docker Documentation](https://docs.docker.com/engine/swarm/key-concepts/), [Swarm mode overview](https://docs.docker.com/engine/swarm/#swarm-mode-cli-commands), [Getting started with swarm mode](https://docs.docker.com/engine/swarm/swarm-tutorial/), [Docker Swarm Mode Tutorials](https://github.com/docker/labs/tree/master/swarm-mode), [Get Started, Part 4: Swarms](https://docs.docker.com/v17.09/get-started/part4/)
 
 - Docker Machine and Docker Compose: [Workflows: using Docker Machine and Docker Compose together in development | Alexander Zeitler](https://alexanderzeitler.com/articles/docker-machine-and-docker-compose-developer-workflows/)
 
