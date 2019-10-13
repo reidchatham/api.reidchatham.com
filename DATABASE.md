@@ -37,4 +37,4 @@ Helpful links: [PostgreSQL not running on Mac](https://dba.stackexchange.com/que
 
 ## Distributed Postgres Database
 
-- HA Postgres database with disaster recovery. [HA Postgresql cluster on docker](https://github.com/seocahill/ha-postgres-docker-stack)
+- HA Postgres database with disaster recovery. [HA Postgresql cluster on docker](https://github.com/seocahill/ha-postgres-docker-stack), [Replicating Postgres inside Docker — The How To](https://medium.com/@2hamed/replicating-postgres-inside-docker-the-how-to-3244dc2305be)
