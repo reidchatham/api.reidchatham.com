@@ -2,6 +2,7 @@
 
 We are using PostgreSQL.
 
+
 ## For use with XCode - [Tutorial: How to use PostgreSQL](https://medium.com/@martinlasek/tutorial-how-to-use-postgresql-efb62a434cc5)
 
 Helpful links: [PostgreSQL not running on Mac](https://dba.stackexchange.com/questions/75214/postgresql-not-running-on-mac?newreg=7653d562d5e448799bb3102faf5d267a), [17.3. Starting the Database Server](https://www.postgresql.org/docs/9.0/server-start.html), [How to Start PostgreSQL Server on Mac OS X via Homebrew](https://chartio.com/resources/tutorials/how-to-start-postgresql-server-on-mac-os-x/)
@@ -32,3 +33,8 @@ Helpful links: [PostgreSQL not running on Mac](https://dba.stackexchange.com/que
 - Wait for Postgres: [Control startup and shutdown order in Compose](https://docs.docker.com/compose/startup-order/)
 
 - Official Docker Image: [postgres - Docker Hub](https://hub.docker.com/_/postgres)
+
+
+## Distributed Postgres Database
+
+- HA Postgres database with disaster recovery. [HA Postgresql cluster on docker](https://github.com/seocahill/ha-postgres-docker-stack), [Replicating Postgres inside Docker — The How To](https://medium.com/@2hamed/replicating-postgres-inside-docker-the-how-to-3244dc2305be)

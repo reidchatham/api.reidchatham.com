@@ -2,20 +2,55 @@
 
 ### Basic usage
 
-Run command `make docker_build_run` to build and run an instance of the api in a docker container on your machine. 
+I like using Make to simplify my run commands and to keep track of my commands as I build so that I can automate and so I don't have to remember lots of complex commands.
 - Getting started with [Make](https://www.cs.oberlin.edu/~kuperman/help/make.html).
 
-Also try `docker-compose up`.
+### Testing
 
-### Launch the server
+#### Use with XCode
 
-Use `make docker_machine_do_launch` to launch to Digital Ocean.
+- Run a postgres database using the env variables from XCode.
+- Run the app in XCode.
+- Check http://localhost:443/
 
-Then try `make docker_machine_ssh` to ssh into the Digital Ocean Droplet.
+#### Docker Compose
 
-Then `docker-compose up` to run the docker container in the Digital Ocean Droplet.
+- Run `make docker_compose_dev`.
+- Check http://localhost:443/
+
+### Publish the server
+
+#### Docker Machine & Docker Swarm
+
+Publish to Docker Hub.
+- Run `make docker_build`.
+- Run `make docker_tag`.
+- Run `make docker_push`.
+
+Create Docker Machines on Digital Ocean
+- Run `make docker_machine_do_launch`.
+- Run `make docker_machine_do_launch_2`.
+- Run `make docker_machine_do_launch_3`.
+
+Initalize Docker Swarm
+- Run `make docker_machine_do_eval`.
+- Run `docker swarm init`.
+- Copy swarm node join command to attach additional workers.
+- Run `make docker_machine_unset`.
+
+Attach Swarm worker nodes
+- Run `make docker_machine_do_eval_2`.
+- Run the command copied from the manager node to add worker nodes.
+- Run `make docker_machine_unset`.
+
+Run Docker Compose Stack on Swarm
+- Run `make docker_machine_do_eval`.
+- Run `make docker_stack_deploy`.
 
 Now try navigating to the ip address of your Droplet to see that it's working. Better yet try it on a different computer, then you know it's working.
+
+Redeploy new changes to the Swarm
+- Run `make docker_stack_deploy`.
 
 ## Server
 - Docker: [Get Started with Docker | Docker](https://www.docker.com/get-started), [Archived: Get Started with Docker | Docker](https://github.com/rchatham/docker.github.io/tree/master/get-started)
@@ -24,7 +59,7 @@ Now try navigating to the ip address of your Droplet to see that it's working. B
 - Docker Compose: [Get Started, Part 3: Services](https://github.com/rchatham/docker.github.io/blob/master/get-started/part3.md)
 	* [Environment variables in Compose](https://docs.docker.com/compose/environment-variables/)
 
-- Docker Swarm: [Swarm mode key concepts | Docker Documentation](https://docs.docker.com/engine/swarm/key-concepts/), [Swarm mode overview](https://docs.docker.com/engine/swarm/#swarm-mode-cli-commands), [Getting started with swarm mode](https://docs.docker.com/engine/swarm/swarm-tutorial/), [Docker Swarm Mode Tutorials](https://github.com/docker/labs/tree/master/swarm-mode)
+- Docker Swarm: [Swarm mode key concepts | Docker Documentation](https://docs.docker.com/engine/swarm/key-concepts/), [Swarm mode overview](https://docs.docker.com/engine/swarm/#swarm-mode-cli-commands), [Getting started with swarm mode](https://docs.docker.com/engine/swarm/swarm-tutorial/), [Docker Swarm Mode Tutorials](https://github.com/docker/labs/tree/master/swarm-mode), [Get Started, Part 4: Swarms](https://docs.docker.com/v17.09/get-started/part4/)
 
 - Docker Machine and Docker Compose: [Workflows: using Docker Machine and Docker Compose together in development | Alexander Zeitler](https://alexanderzeitler.com/articles/docker-machine-and-docker-compose-developer-workflows/)
 
