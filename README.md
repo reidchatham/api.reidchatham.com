@@ -2,24 +2,46 @@
 
 ### Basic usage
 
+I like using Make to simplify my run commands and to keep track of my commands as I build so that I can automate and so I don't have to remember lots of complex commands.
+- Getting started with [Make](https://www.cs.oberlin.edu/~kuperman/help/make.html).
+
 #### Use with XCode
 
 - Run a postgres database using the env variables from XCode.
 - Run the app in XCode.
+- Check http://localhost:443/
 
 #### Docker Compose
 
-- Run `make docker_compose_dev`
+- Run `make docker_compose_dev`.
+- Check http://localhost:443/
 
-#### Docker Machine
+#### Docker Machine & Docker Swarm
 
-- 
+Publish to Docker Hub.
+- Run `make docker_build`.
+- Run `make docker_tag`.
+- Run `make docker_push`.
 
+Create Docker Machines on Digital Ocean
+- Run `make docker_machine_do_launch`.
+- Run `make docker_machine_do_launch_2`.
+- Run `make docker_machine_do_launch_3`.
 
-Run command `make docker_build_run` to build and run an instance of the api in a docker container on your machine. 
-- Getting started with [Make](https://www.cs.oberlin.edu/~kuperman/help/make.html).
+Initalize Docker Swarm
+- Run `make docker_machine_do_eval`.
+- Run `docker swarm init`.
+- Copy swarm node join command to attach additional workers.
+- Run `make docker_machine_unset`.
 
-Also try `docker-compose up`.
+Attach Swarm worker nodes
+- Run `make docker_machine_do_eval_2`.
+- Run the command copied from the manager node to add worker nodes.
+- Run `make docker_machine_unset`.
+
+Run Docker Compose Stack on Swarm
+- Run `make docker_machine_do_eval`.
+- Run `make docker_stack_deploy`.
 
 ### Launch the server
 
