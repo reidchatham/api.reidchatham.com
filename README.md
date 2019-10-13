@@ -49,6 +49,9 @@ Run Docker Compose Stack on Swarm
 
 Now try navigating to the ip address of your Droplet to see that it's working. Better yet try it on a different computer, then you know it's working.
 
+Redeploy new changes to the server
+- Run `make docker_stack_deploy`.
+
 ## Server
 - Docker: [Get Started with Docker | Docker](https://www.docker.com/get-started), [Archived: Get Started with Docker | Docker](https://github.com/rchatham/docker.github.io/tree/master/get-started)
 	* [Docker ARG, ENV and .env - a Complete Guide](https://vsupalov.com/docker-arg-env-variable-guide/)
