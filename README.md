@@ -5,6 +5,8 @@
 I like using Make to simplify my run commands and to keep track of my commands as I build so that I can automate and so I don't have to remember lots of complex commands.
 - Getting started with [Make](https://www.cs.oberlin.edu/~kuperman/help/make.html).
 
+### Testing
+
 #### Use with XCode
 
 - Run a postgres database using the env variables from XCode.
@@ -15,6 +17,8 @@ I like using Make to simplify my run commands and to keep track of my commands a
 
 - Run `make docker_compose_dev`.
 - Check http://localhost:443/
+
+### Publish the server
 
 #### Docker Machine & Docker Swarm
 
@@ -42,14 +46,6 @@ Attach Swarm worker nodes
 Run Docker Compose Stack on Swarm
 - Run `make docker_machine_do_eval`.
 - Run `make docker_stack_deploy`.
-
-### Launch the server
-
-Use `make docker_machine_do_launch` to launch to Digital Ocean.
-
-Then try `make docker_machine_ssh` to ssh into the Digital Ocean Droplet.
-
-Then `docker-compose up` to run the docker container in the Digital Ocean Droplet.
 
 Now try navigating to the ip address of your Droplet to see that it's working. Better yet try it on a different computer, then you know it's working.
 
