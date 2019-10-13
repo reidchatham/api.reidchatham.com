@@ -20,5 +20,5 @@ WORKDIR /app
 COPY --from=builder /app/Resources/ /app/Resources/
 COPY --from=builder /build/bin/Run .
 COPY --from=builder /build/lib/* /usr/lib/
-EXPOSE 80
+EXPOSE 443
 ENTRYPOINT ./Run serve -e prod -b 0.0.0.0
