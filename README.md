@@ -57,6 +57,7 @@ Redeploy new changes to the Swarm
 	* [Docker ARG, ENV and .env - a Complete Guide](https://vsupalov.com/docker-arg-env-variable-guide/)
 	* [Protect the Docker daemon socket](https://docs.docker.com/engine/security/https/)
 	* [Secure services with TLS](https://docs.docker.com/ee/ucp/interlock/usage/tls/)
+	* [Enabling HTTPS with Let's Encrypt on Docker](https://medium.com/bros/enabling-https-with-lets-encrypt-over-docker-9cad06bdb82b)
 
 - Docker Compose: [Get Started, Part 3: Services](https://github.com/rchatham/docker.github.io/blob/master/get-started/part3.md), [Networking in Compose](https://docs.docker.com/compose/networking/)
 	* [Environment variables in Compose](https://docs.docker.com/compose/environment-variables/)
