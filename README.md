@@ -64,7 +64,9 @@ Redeploy new changes to the Swarm
 
 - Docker Swarm: [Swarm mode key concepts | Docker Documentation](https://docs.docker.com/engine/swarm/key-concepts/), [Swarm mode overview](https://docs.docker.com/engine/swarm/#swarm-mode-cli-commands), [Getting started with swarm mode](https://docs.docker.com/engine/swarm/swarm-tutorial/), [Docker Swarm Mode Tutorials](https://github.com/docker/labs/tree/master/swarm-mode), [Get Started, Part 4: Swarms](https://docs.docker.com/v17.09/get-started/part4/)
 
-- Docker Machine and Docker Compose: [Workflows: using Docker Machine and Docker Compose together in development | Alexander Zeitler](https://alexanderzeitler.com/articles/docker-machine-and-docker-compose-developer-workflows/)
+- Docker Machine:
+	* Connect to a Docker host with Docker Machine: [Connect your Docker client to a remote Docker host](https://www.kevinkuszyk.com/2016/11/28/connect-your-docker-client-to-a-remote-docker-host/)
+	* Docker Machine and Docker Compose: [Workflows: using Docker Machine and Docker Compose together in development | Alexander Zeitler](https://alexanderzeitler.com/articles/docker-machine-and-docker-compose-developer-workflows/)
 
 - Swish: [GitHub - thomaspaulmann/Swish: 👷Build Swift Projects on a Remote Machine within Xcode.](https://github.com/thomaspaulmann/Swish)
 	* Useful for running Xcode on external build systems
