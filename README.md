@@ -55,6 +55,7 @@ Redeploy new changes to the Swarm
 ## Server
 - Docker: [Get Started with Docker | Docker](https://www.docker.com/get-started), [Archived: Get Started with Docker | Docker](https://github.com/rchatham/docker.github.io/tree/master/get-started)
 	* [Docker ARG, ENV and .env - a Complete Guide](https://vsupalov.com/docker-arg-env-variable-guide/)
+	* [Protect the Docker daemon socket](https://docs.docker.com/engine/security/https/)
 
 - Docker Compose: [Get Started, Part 3: Services](https://github.com/rchatham/docker.github.io/blob/master/get-started/part3.md), [Networking in Compose](https://docs.docker.com/compose/networking/)
 	* [Environment variables in Compose](https://docs.docker.com/compose/environment-variables/)
