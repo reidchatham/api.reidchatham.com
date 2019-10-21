@@ -9,17 +9,21 @@ final class UserController {
     }
 
     func register(_ req: Request) throws -> Future<Response> {
+        // decode User from request data
         return try req.content.decode(User.self).flatMap { user in
-
+            // query if user exists in database
             return User.query(on: req).filter(\User.email == user.email).first().flatMap { result in
+                // if user exists redirect to registration
                 if let _ = result {
                     return Future.map(on: req) {
                         return req.redirect(to: "/register")
                     }
                 }
 
+                // if user does not exist save the hash of the password
                 user.password = try BCryptDigest().hash(user.password)
 
+                // save the new user and redirect to login
                 return user.save(on: req).map { _ in
                     return req.redirect(to: "/login")
                 }
@@ -28,6 +32,7 @@ final class UserController {
     }
 
     func renderLogin(_ req: Request) throws -> Future<View> {
+        // render the login view
         return try req.view().render("login")
     }
 
