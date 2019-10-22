@@ -52,6 +52,7 @@ Now try navigating to the ip address of your Droplet to see that it's working. B
 Redeploy new changes to the Swarm
 - Run `make docker_stack_deploy`.
 
+
 ## Server
 - Docker: [Get Started with Docker | Docker](https://www.docker.com/get-started), [Archived: Get Started with Docker | Docker](https://github.com/rchatham/docker.github.io/tree/master/get-started)
 	* [Docker ARG, ENV and .env - a Complete Guide](https://vsupalov.com/docker-arg-env-variable-guide/)
@@ -87,18 +88,11 @@ Redeploy new changes to the Swarm
 - Postgres: [How to Start PostgreSQL Server on Mac OS X via Homebrew](https://chartio.com/resources/tutorials/how-to-start-postgresql-server-on-mac-os-x/)
 	* Useful stack overflow answers. [Homebrew postgres broken](https://stackoverflow.com/questions/27700596/homebrew-postgres-broken), [PostgreSQL error Fatal: role “username” does not exist](https://stackoverflow.com/questions/28276706/postgresql-error-fatal-role-username-does-not-exist), [Drop PostgreSQL database through command line [closed]](https://stackoverflow.com/questions/7073773/drop-postgresql-database-through-command-line)
 
-### Server Side Swift
-* Running a Vapor Server in a Dockerized Linux Container and writing and testing using Xcode and Docker on Mac
 
-1. Download Xcode
-2. Download Docker for Mac
-3. SwiftEnv
-	* 	[Installation — swiftenv 1.4.0 documentation](https://swiftenv.fuller.li/en/latest/installation.html#via-homebrew)
-4. Install Vapor
-	* 	`brew tap vapor/tap`
-	* `brew install vapor/tap/vapor`
-4. Install Swish
-	 * `brew install thomaspaulmann/homebrew-formulae/swish`
+### ToDo
+
+Create a Bitcoin Bot!
+- [Let’s write a cryptocurrency bot. (part 1)](https://medium.com/@joeldg/an-advanced-tutorial-a-new-crypto-currency-trading-bot-boilerplate-framework-e777733607ae)
 
 ---
 <p align="center">
