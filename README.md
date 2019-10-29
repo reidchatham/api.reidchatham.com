@@ -93,6 +93,7 @@ Redeploy new changes to the Swarm
 
 Create a Bitcoin Bot!
 - [Let’s write a cryptocurrency bot. (part 1)](https://medium.com/@joeldg/an-advanced-tutorial-a-new-crypto-currency-trading-bot-boilerplate-framework-e777733607ae)
+- [Coding Your Own Algo-Trading Robot](https://www.investopedia.com/articles/active-trading/081315/how-code-your-own-algo-trading-robot.asp)
 
 ---
 <p align="center">
