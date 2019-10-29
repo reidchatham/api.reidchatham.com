@@ -95,6 +95,9 @@ Create a Bitcoin Bot!
 - [Let’s write a cryptocurrency bot. (part 1)](https://medium.com/@joeldg/an-advanced-tutorial-a-new-crypto-currency-trading-bot-boilerplate-framework-e777733607ae)
 - [Coding Your Own Algo-Trading Robot](https://www.investopedia.com/articles/active-trading/081315/how-code-your-own-algo-trading-robot.asp)
 
+## Useful Links
+- [Gatekeeper: Rate limiting middleware for Vapor 👮](https://github.com/nodes-vapor/gatekeeper)
+
 ---
 <p align="center">
     <img src="https://user-images.githubusercontent.com/1342803/36623515-7293b4ec-18d3-11e8-85ab-4e2f8fb38fbd.png" width="320" alt="API Template">
