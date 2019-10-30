@@ -88,6 +88,7 @@ Redeploy new changes to the Swarm
 - Postgres: [How to Start PostgreSQL Server on Mac OS X via Homebrew](https://chartio.com/resources/tutorials/how-to-start-postgresql-server-on-mac-os-x/)
 	* Useful stack overflow answers. [Homebrew postgres broken](https://stackoverflow.com/questions/27700596/homebrew-postgres-broken), [PostgreSQL error Fatal: role “username” does not exist](https://stackoverflow.com/questions/28276706/postgresql-error-fatal-role-username-does-not-exist), [Drop PostgreSQL database through command line [closed]](https://stackoverflow.com/questions/7073773/drop-postgresql-database-through-command-line)
 
+- JWT: [How to secure a REST API using JWT](https://blog.logrocket.com/how-to-secure-a-rest-api-using-jwt-7efd83e71432/)
 
 ### ToDo
 
