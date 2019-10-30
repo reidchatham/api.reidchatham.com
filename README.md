@@ -98,6 +98,9 @@ Create a Bitcoin Bot!
 
 ## Useful Links
 - [Gatekeeper: Rate limiting middleware for Vapor 👮](https://github.com/nodes-vapor/gatekeeper)
+- [Harden Your Security Headers For Vapor](https://github.com/brokenhandsio/VaporSecurityHeaders)
+- [Sublimate: Ridiculously fast full stack Swift prototyping with Vapor and Sourcery.](https://github.com/gabrielepalma/sublimate)
+
 
 ---
 <p align="center">
