@@ -101,6 +101,12 @@ Create a Bitcoin Bot!
 - [Harden Your Security Headers For Vapor](https://github.com/brokenhandsio/VaporSecurityHeaders)
 - [Sublimate: Ridiculously fast full stack Swift prototyping with Vapor and Sourcery.](https://github.com/gabrielepalma/sublimate)
 
+### Libraries
+- [Stripe Provider for Vapor](https://github.com/vapor-community/stripe-provider)
+- [Embrace the power of curl in Vapor apps](https://github.com/vzsg/Curly)
+- [A high performance JSON library in Swift](https://github.com/Ikiga/IkigaJSON)
+- [A Vapor micro-service to store address information](https://github.com/Ikiga/IkigaJSON)
+- [](
 
 ---
 <p align="center">
