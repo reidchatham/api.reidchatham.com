@@ -90,6 +90,8 @@ Redeploy new changes to the Swarm
 
 - Security: [How to secure a REST API using JWT](https://blog.logrocket.com/how-to-secure-a-rest-api-using-jwt-7efd83e71432/), [Security Best Practices for Managing API Access Tokens](https://dzone.com/articles/security-best-practices-for-managing-api-access-to), [REST API Security Essentials](https://restfulapi.net/security-essentials/)
 
+- Database: [Database Server Scaling Strategies](https://realscale.cloud66.com/database-server-scaling-strategies/)
+
 ### ToDo
 
 Create a Bitcoin Bot!
