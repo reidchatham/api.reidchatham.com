@@ -1,6 +1,7 @@
 # Build image
 FROM swift:5.0 as builder
 RUN apt-get -qq update && apt-get -q -y install \
+  libssl-dev zlib1g-dev \
   tzdata \
   && rm -r /var/lib/apt/lists/*
 WORKDIR /app
@@ -19,6 +20,6 @@ RUN apt-get -qq update && apt-get install -y \
 WORKDIR /app
 COPY --from=builder /app/Resources/ /app/Resources/
 COPY --from=builder /build/bin/Run .
-COPY --from=builder /build/lib/* /usr/lib/
+#COPY --from=builder /build/lib/* /usr/lib/
 EXPOSE 443
 ENTRYPOINT ./Run serve -e prod -b 0.0.0.0

@@ -51,8 +51,8 @@
         "repositoryURL": "https://github.com/krzyzanowskim/CryptoSwift.git",
         "state": {
           "branch": null,
-          "revision": "a44caef0550c346e0ab9172f7c9a3852c1833599",
-          "version": "1.3.0"
+          "revision": "3a2acbb32ab68215ee1596ee6004da8e90c3721b",
+          "version": "1.0.0"
         }
       },
       {
@@ -80,15 +80,6 @@
           "branch": null,
           "revision": "b7b579307e32b479555e05be2ca8c3b3b7c4151a",
           "version": "3.1.0"
-        }
-      },
-      {
-        "package": "FluentPostgreSQL",
-        "repositoryURL": "https://github.com/vapor/fluent-postgresql.git",
-        "state": {
-          "branch": null,
-          "revision": "8e3eb9d24d54ac58c8d04c194ad6b24f0b1b667e",
-          "version": "1.0.0"
         }
       },
       {
@@ -197,15 +188,6 @@
           "branch": null,
           "revision": "8f2238dc48fa480ce6043ee0022ebe73c8ddc300",
           "version": "3.3.0"
-        }
-      },
-      {
-        "package": "PostgreSQL",
-        "repositoryURL": "https://github.com/vapor/postgresql.git",
-        "state": {
-          "branch": null,
-          "revision": "69ccf32e9164b207f9a773edac5433fe68ae3e5b",
-          "version": "1.5.0"
         }
       },
       {

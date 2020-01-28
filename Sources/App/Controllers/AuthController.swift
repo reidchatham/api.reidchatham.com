@@ -1,6 +1,6 @@
 import JWTDataProvider
 import JWTMiddleware
-//import CryptoSwift
+import CryptoSwift
 import LingoVapor
 import SendGrid
 import Crypto
@@ -68,9 +68,9 @@ final class AuthController: RouteCollection {
 
             if emailConfirmation {
                 // Generate a unique code to verify the user with from the current date and time.
-                user.emailCode = try! Crypto.MD5.hash(Date().description).hexEncodedString()
+//                user.emailCode = try! Crypto.MD5.hash(Date().description).hexEncodedString()
 
-//                user.emailCode = Date().description.md5()
+                user.emailCode = Date().description.md5()
             }
 
             return user.save(on: request)
@@ -122,8 +122,8 @@ final class AuthController: RouteCollection {
 
 
             // Create a new random password from the current date/time
-            let str = try! Crypto.MD5.hash(Date().description).hexEncodedString()
-//            let str = Date().description.md5()
+//            let str = try! Crypto.MD5.hash(Date().description).hexEncodedString()
+            let str = Date().description.md5()
             let index = str.index(str.startIndex, offsetBy: 8)
             let password = String(str[..<index])
 

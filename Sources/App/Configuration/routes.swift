@@ -25,23 +25,23 @@ public func routes(
     router.post("todos", use: todoController.create)
     router.delete("todos", Todo.parameter, use: todoController.delete)
 
-    // let userController = UserController1()
-    // router.get("register", use: userController.renderRegister)
-    // router.post("register", use: userController.register)
-    // router.get("login", use: userController.renderLogin)
-    //
-    // let authSessionRouter = router.grouped(User.authSessionsMiddleware())
-    // authSessionRouter.post("login", use: userController.login)
-    //
-    // let protectedRouter = authSessionRouter.grouped(RedirectMiddleware<User>(path: "/login"))
-    // protectedRouter.get("profile", use: userController.renderProfile)
-    //
-    // router.get("logout", use: userController.logout)
+    let userController = UserController1()
+    router.get("register", use: userController.renderRegister)
+    router.post("register", use: userController.register)
+    router.get("login", use: userController.renderLogin)
+
+    let authSessionRouter = router.grouped(User.authSessionsMiddleware())
+    authSessionRouter.post("login", use: userController.login)
+
+    let protectedRouter = authSessionRouter.grouped(RedirectMiddleware<User>(path: "/login"))
+    protectedRouter.get("profile", use: userController.renderProfile)
+
+    router.get("logout", use: userController.logout)
 
 
     /// New additions
 
-    let root = router.grouped(any, "users")
+    let root = router.grouped("users")
 
     // Create a 'health' route useed by AWS to check if the server needs a re-boot.
     root.get("health") { _ in

@@ -9,7 +9,6 @@ import JWTVapor
 import SendGrid
 import Vapor
 
-
 /// Used to check wheather we should send a confirmation email when a user creates an account,
 /// or if they should be auto-confirmed.
 /// - Note: This variable is set through the environment variable "EMAIL_CONFIRMATION" and "on/off" as values.
@@ -97,7 +96,7 @@ public func configure(
 
     /// Configure migrations
     var migrations = MigrationConfig()
-    //    migrations.add(model: Todo.self, database: .mysql)
+    migrations.add(model: Todo.self, database: .mysql)
     migrations.add(model: User.self, database: .mysql)
     migrations.add(model: Attribute.self, database: .mysql)
     services.register(migrations)
@@ -122,7 +121,7 @@ public func configure(
     /// Register the `AppConfig` service,
     /// used to store arbitrary data.
     services.register(AppConfig(emailURL: emailURL, emailFrom: emailFrom))
-    
+
 
     // Register routes to the router
 //    let router = EngineRouter.default()
