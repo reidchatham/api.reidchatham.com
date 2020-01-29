@@ -8,4 +8,11 @@ if
 {
     sleep(duration)
 }
-try app(.detect()).run()
+
+// The contents of main are wrapped in a do/catch block because any errors that get raised to the top level will crash Xcode
+do {
+    try app(.detect()).run()
+} catch {
+    print(error)
+    exit(1)
+}

@@ -10,6 +10,8 @@ services:
       POSTGRES_USER: test
       POSTGRES_PASSWORD: test
       POSTGRES_DB: test
+      JWT_PUBLIC: n-value-from-jwt
+      JWT_SECRET: d-value-from-jwt
       # POSTGRES_PORT: 27017
       EXPOSED_PORT: 443
     # env_file:
