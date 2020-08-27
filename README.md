@@ -94,6 +94,11 @@ Redeploy new changes to the Swarm
 - Database: [Database Server Scaling Strategies](https://realscale.cloud66.com/database-server-scaling-strategies/)
 
 ### ToDo
+Integrate with ORY for OAuth2.0 integration
+- [OAuth2 with ORY Hydra, Vapor 3 and iOS 12](https://medium.com/12plus1/oauth2-with-ory-hydra-vapor-3-and-ios-12-ca0e61c28f5a)
+- [Part 2](https://medium.com/12plus1/oauth2-implementation-with-ory-hydra-vapor-3-and-ios-12-d1fe688a5479)
+- [3](https://medium.com/12plus1/oauth2-implementation-with-ory-hydra-vapor-3-and-ios-12-8a98d1451caf)
+- [4](https://medium.com/12plus1/oauth2-implementation-with-ory-hydra-vapor-3-and-ios-12-dc765f2b5d68)
 
 Create a Bitcoin Bot!
 - [Let’s write a cryptocurrency bot. (part 1)](https://medium.com/@joeldg/an-advanced-tutorial-a-new-crypto-currency-trading-bot-boilerplate-framework-e777733607ae)
