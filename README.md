@@ -2,7 +2,7 @@
 
 ### Basic usage
 
-I like using Make to simplify my run commands and to keep track of my commands as I build so that I can automate and so I don't have to remember lots of complex commands.
+I like using Make to help simplify and keep track of the commands I use as I build.
 - Getting started with [Make](https://www.cs.oberlin.edu/~kuperman/help/make.html).
 
 ### Testing
